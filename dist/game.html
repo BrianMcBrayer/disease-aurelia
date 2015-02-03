@@ -1,0 +1,31 @@
+<template>
+  <import from='./cell'></import>
+
+  <header>
+    <div id="controls">
+      <div id="diseaseAntidotes">
+        <!-- put intelligent game components here -->
+        <cell cell-type="${'cell-antidote'}" color.bind="antidoteCell.color" repeat.for="antidoteCell of antidotes"></cell>
+      </div>
+    </div>
+  </header>
+
+  <div id="gameBoard">
+    <div class="feed feed-point">
+      <ul>
+        <li>alive: 2/20</li>
+        <li>killed: 20</li>
+        <li>mistakes: 5</li>
+      </ul>
+    </div>
+    <div class="feed feed-geek">
+      <ul>
+        <li>time: 1:45</li>
+        <li>frames: 5463</li>
+        <li>lps: 60</li>
+      </ul>
+    </div>
+
+    <cell cell-type="${'cell-disease'}" color.bind="cell" repeat.for="cell of cells"></cell>
+  </div>
+</template>

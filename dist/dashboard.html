@@ -1,0 +1,7 @@
+<template>
+  <ul>
+    <li repeat.for="row of parentRouter.navigation" class="${row.isActive ? 'active' : ''}">
+      <a href.bind="row.href">${row.title}</a>
+    </li>
+  </ul>
+</template>

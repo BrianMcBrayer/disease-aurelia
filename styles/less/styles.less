@@ -1,0 +1,95 @@
+.app-wrapper {
+
+  display: flex;
+  flex: 1 100%;
+  flex-flow: row wrap;
+
+  padding: 0 25px;
+
+  min-height: 350px;
+  min-width: 320px;
+
+  header#main {
+    order: 1;
+  }
+
+  .page-host{
+    flex: 1 100%;
+    order: 2;
+
+    position: relative;
+
+    height: calc(~"95vh - 150px");
+    min-height: 200px;
+  }
+
+  #controls {
+    position: relative;
+
+    height: 40px;
+  }
+
+  #gameBoard {
+    background-color: lightgray;
+    border-radius: 2px;
+    border: 1px solid gray;
+
+    position: relative;
+
+    height: 100%;
+
+    .feed {
+      @feedDistance: 5px;
+
+      position: absolute;
+      top: @feedDistance;
+
+      color: white;
+
+      ul {
+        list-style-type: none;
+      }
+
+      &.feed-point {
+        left: @feedDistance;
+      }
+
+      &.feed-geek {
+        right: @feedDistance;
+      }
+    }
+  }
+
+  .cell {
+    @diameter: 30px;
+
+    border-radius: 50%;
+    width: @diameter;
+    height: @diameter;
+    border: 1px solid gray;
+
+    &.red {
+      background-color: red;
+    }
+
+    &.yellow {
+      background-color: yellow;
+    }
+
+    &.blue {
+      background-color: blue;
+    }
+
+    &.green {
+      background-color: green;
+    }
+
+    &.cell-disease {
+      position: absolute;
+    }
+
+    &.cell-antidote {
+      display: inline-block;
+    }
+  }
+}

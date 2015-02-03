@@ -1,0 +1,67 @@
+.app-wrapper {
+  display: flex;
+  flex: 1 100%;
+  flex-flow: row wrap;
+  padding: 0 25px;
+  min-height: 350px;
+  min-width: 320px;
+}
+.app-wrapper header#main {
+  order: 1;
+}
+.app-wrapper .page-host {
+  flex: 1 100%;
+  order: 2;
+  position: relative;
+  height: calc(95vh - 150px);
+  min-height: 200px;
+}
+.app-wrapper #controls {
+  position: relative;
+  height: 40px;
+}
+.app-wrapper #gameBoard {
+  background-color: lightgray;
+  border-radius: 2px;
+  border: 1px solid gray;
+  position: relative;
+  height: 100%;
+}
+.app-wrapper #gameBoard .feed {
+  position: absolute;
+  top: 5px;
+  color: white;
+}
+.app-wrapper #gameBoard .feed ul {
+  list-style-type: none;
+}
+.app-wrapper #gameBoard .feed.feed-point {
+  left: 5px;
+}
+.app-wrapper #gameBoard .feed.feed-geek {
+  right: 5px;
+}
+.app-wrapper .cell {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+}
+.app-wrapper .cell.red {
+  background-color: red;
+}
+.app-wrapper .cell.yellow {
+  background-color: yellow;
+}
+.app-wrapper .cell.blue {
+  background-color: blue;
+}
+.app-wrapper .cell.green {
+  background-color: green;
+}
+.app-wrapper .cell.cell-disease {
+  position: absolute;
+}
+.app-wrapper .cell.cell-antidote {
+  display: inline-block;
+}
